@@ -8,23 +8,71 @@
     <title>Silent Lad</title>
   </head>
   <body>
-    <div class="element"></div>
-    <script>
-      var array = ["Shhhhhhhhhh ^100", "Silence ^100", "I am Silent Lad."];
-      var typed = new Typed(".element", {
-        strings: array,
-        smartBackspace: true,
-        backSpeed: 100,
-        typeSpeed: 100,
-        fadeOut: false,
-        fadeOutClass: "typed-fade-out",
-        showCursor: false,
-        fadeOutDelay: 500
-      });
-    </script>
+    <h1 class="animate1">&nbsp;Shhh...&nbsp;</h1>
+    <h1 class="animate2">&nbsp;Silence&nbsp;</h1>
+    <h1 class="animate3">&nbsp;I am Silent Lad.&nbsp;</h1>
+    <script></script>
     <style>
-      /* .alphabet {
-      } */
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        font-family: "Open Sans", "Helvetica Neue", sans-serif;
+        font-size: 10vw;
+        font-weight: bold;
+        position: absolute;
+        display: block;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: #ddd;
+        -webkit-filter: blur(0.5vw) saturate(0%) contrast(2000%);
+        filter: blur(0.5vw) saturate(0%) contrast(2000%);
+      }
+      .animate1 {
+        -webkit-animation: fade 5s ease-in-out;
+        animation: fade 5s ease-in-out;
+      }
+      .animate2 {
+        -webkit-animation: fade 5s ease-in-out;
+        animation: fade 5s ease-in-out;
+        animation-delay: 5s;
+      }
+      .animate3 {
+        -webkit-animation: fade 5s ease-in-out;
+        animation: fade 5s ease-in-out;
+        animation-delay: 10s;
+      }
+      @-webkit-keyframes fade {
+        0% {
+          opacity: 0;
+          color: #898989;
+        }
+        50% {
+          color: #000;
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          color: #898989;
+        }
+      }
+      @keyframes fade {
+        0% {
+          opacity: 0;
+          color: #898989;
+        }
+        50% {
+          opacity: 1;
+          color: #000;
+        }
+        100% {
+          opacity: 0;
+          color: #898989;
+        }
+      }
     </style>
   </body>
 </html>
